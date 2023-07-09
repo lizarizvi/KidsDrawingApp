@@ -54,8 +54,7 @@
             android:background="@color/YELLOW"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/YELLOW"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/YELLOW" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -64,8 +63,7 @@
             android:background="@color/SKIN"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/SKIN"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/SKIN" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -74,8 +72,7 @@
             android:background="@color/black"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/black"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/black" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -84,8 +81,7 @@
             android:background="@color/RED"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/RED"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/RED" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -94,8 +90,7 @@
             android:background="@color/GREEN"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/GREEN"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/GREEN" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -104,8 +99,7 @@
             android:background="@color/BLUE"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/BLUE"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:tag="@color/BLUE" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -114,8 +108,7 @@
             android:background="@color/LOLLIPOP"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/LOLLIPOP"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:tag="@color/LOLLIPOP" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -124,8 +117,7 @@
             android:background="@color/RANDOM"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/RANDOM"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:tag="@color/RANDOM" />
 
         <ImageButton
             android:layout_width="25dp"
@@ -134,8 +126,7 @@
             android:background="@color/white"
             android:onClick="paintClicked"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/white"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:tag="@color/white" />
 
     </LinearLayout>
 
@@ -156,8 +147,7 @@
             android:layout_height="50dp"
             android:layout_margin="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/gallery"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:src="@drawable/gallery" />
 
         <ImageButton
             android:id="@+id/ib_undo"
@@ -165,8 +155,7 @@
             android:layout_height="50dp"
             android:layout_margin="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/undo"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:src="@drawable/undo" />
 
         <ImageButton
             android:id="@+id/ib_brush"
@@ -174,8 +163,7 @@
             android:layout_height="50dp"
             android:layout_margin="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/paintbrush"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:src="@drawable/paintbrush" />
 
         <ImageButton
             android:id="@+id/ib_save"
@@ -183,8 +171,7 @@
             android:layout_height="50dp"
             android:layout_margin="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/save"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:src="@drawable/save" />
 
     </LinearLayout>
 

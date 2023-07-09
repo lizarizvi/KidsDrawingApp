@@ -86,18 +86,18 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        val ib_brush: ImageButton = findViewById(R.id.ib_brush)
-        ib_brush.setOnClickListener {
+        val ibBrush: ImageButton = findViewById(R.id.ib_brush)
+        ibBrush.setOnClickListener {
             showBrushSizeChooserDialog()
         }
 
-        val ib_undo: ImageButton = findViewById(R.id.ib_undo)
-        ib_undo.setOnClickListener {
+        val ibUndo: ImageButton = findViewById(R.id.ib_undo)
+        ibUndo.setOnClickListener {
             drawingView?.onClickUndo()
         }
 
-        val ib_save: ImageButton = findViewById(R.id.ib_save)
-        ib_save.setOnClickListener {
+        val ibSave: ImageButton = findViewById(R.id.ib_save)
+        ibSave.setOnClickListener {
             if(isReadStorageAllowed()){
                 showProgressDialog()
                 lifecycleScope.launch{
@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isReadStorageAllowed() : Boolean{
-        val result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        val result = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
         return result == PackageManager.PERMISSION_GRANTED
     }
 
@@ -184,7 +184,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRationaleDialog(title: String, message: String) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        builder.setTitle(title).setMessage(message).setPositiveButton("cancel") { dialog, _ ->
+        builder.setTitle(title).setMessage(message).setPositiveButton("cancel")
+        {
+                dialog, _ ->
             dialog.dismiss()
         }
         builder.create().show()
@@ -212,7 +214,7 @@ class MainActivity : AppCompatActivity() {
                     mBitmap.compress(Bitmap.CompressFormat.PNG, 90, bytes)
                     val f = File(
                         externalCacheDir?.absoluteFile.toString() +
-                                File.separator + "KidsDrawingApp_" + System.currentTimeMillis() / 1000 + ".png")
+                                File.separator + "Kids Drawing App" + System.currentTimeMillis() / 1000 + ".png")
                     val fo = FileOutputStream(f)
                     fo.write(bytes.toByteArray())
                     fo.close()
@@ -222,15 +224,15 @@ class MainActivity : AppCompatActivity() {
                         if (result.isNotEmpty()) {
                             Toast.makeText(
                                 this@MainActivity,
-                                "File saved successfully.",
-                                Toast.LENGTH_LONG
+                                "File saved successfully: $result",
+                                Toast.LENGTH_SHORT
                             ).show()
                             shareImage(result)
                         } else {
                             Toast.makeText(
                                 this@MainActivity,
                                 "Something went wrong.",
-                                Toast.LENGTH_LONG
+                                Toast.LENGTH_SHORT
                             ).show()
                         }
                     }
@@ -245,14 +247,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showProgressDialog() {
-        val customProgressDialog = Dialog(this)
+        customProgressDialog = Dialog(this@MainActivity)
 
         /*Set the screen content from a layout resource.
         The resource will be inflated, adding all top-level views to the screen.*/
-        customProgressDialog.setContentView(R.layout.dialog_custom_progress)
+        customProgressDialog?.setContentView(R.layout.dialog_custom_progress)
 
         //Start the dialog and display it on screen.
-        customProgressDialog.show()
+        customProgressDialog?.show()
     }
 
     private fun cancelProgressDialog() {
