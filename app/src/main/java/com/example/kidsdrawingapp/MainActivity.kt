@@ -29,7 +29,6 @@ import java.io.FileOutputStream
 
 
 class MainActivity : AppCompatActivity() {
-
     var drawingView: DrawingView? = null
     var mImageBtnCurrentPaint: ImageButton? = null
     var customProgressDialog : Dialog? = null
